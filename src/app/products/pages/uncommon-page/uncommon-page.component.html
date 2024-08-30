@@ -15,13 +15,21 @@
       </p>
 
       <p-button (click)="changeClient()"
-        label="Cambiar Persona"></p-button>
+      label="Cambiar Persona"></p-button>
     </p-fieldset>
   </div>
 
+  <!--? Uso del pipe i18nPlural se usa para seleccionar un valor de un mapa de traducción basado en una clave. -->
   <div class="col-12 md:col-6">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>
+        Actualmente {{ clients.length | i18nPlural:clientsMap}}
+      </p>
 
+      <p-button
+        (click)="deletedClient()"
+        label="Borrar cliente">
+      </p-button>
     </p-fieldset>
   </div>
 
