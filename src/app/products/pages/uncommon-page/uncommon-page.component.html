@@ -55,14 +55,22 @@
       <pre>{{ clients | slice:0:-3 }}</pre>
     </p-fieldset>
   </div>
+
+  <!--? Uso del pipe Json se usa para convertir un valor en una cadena JSON. -->
   <div class="col-12 md:col-6">
     <p-fieldset legend="Json Pipe" [toggleable]="true">
-
+      <pre>{{ person | json }}</pre>
     </p-fieldset>
   </div>
 
+  <!--? Usar el pipe keyvalue para iterar sobre un objeto y devolver una matriz de pares clave-valor. -->
   <div class="col-12 md:col-6">
     <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+        </li>
+      </ul>
 
     </p-fieldset>
   </div>

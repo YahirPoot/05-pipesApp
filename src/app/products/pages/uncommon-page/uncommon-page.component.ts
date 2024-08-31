@@ -33,4 +33,11 @@ export class UncommonPageComponent {
     this.clients.shift();
   }
 
+  //! --keyvalue pipe--
+  public person = {
+    name: 'Angel',
+    age: 21,
+    address: 'Timucuy, Yucatan, Mexico'
+  }
+
 }
