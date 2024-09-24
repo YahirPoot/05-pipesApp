@@ -8,6 +8,9 @@ import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.compo
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { OrdesComponent } from './pages/ordes/ordes.component';
 import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+import { CanFlyPipe } from './pipes/can-fly.pipe';
+import { SortByPipe } from './pipes/sort-by.pipe';
+import { ColorNamePipe } from './pipes/color-name.pipe';
 
 
 
@@ -19,7 +22,10 @@ import { ToggleCasePipe } from './pipes/toggle-case.pipe';
       UncommonPageComponent,
       OrdesComponent,
       //Decalracion del nuevo pipe hecho por nmi
-      ToggleCasePipe
+      ToggleCasePipe,
+      CanFlyPipe,
+      SortByPipe,
+      ColorNamePipe
   ],
   imports: [
     CommonModule,

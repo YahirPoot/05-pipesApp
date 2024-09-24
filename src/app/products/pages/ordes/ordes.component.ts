@@ -1,15 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Color, Hero } from '../../interfaces/hero.interface';
 
 @Component({
   selector: 'products-ordes',
   templateUrl: './ordes.component.html',
   styles: ``
 })
-export class OrdesComponent {
+export class OrdesComponent{
 
   public isUpperCase: boolean = false;
+  public orderBy?: keyof Hero;
+
+  public heroes: Hero[] = [
+    {
+      name: 'Superman',
+      canFly: true,
+      color: Color.blue
+    },
+    {
+      name: 'Batman',
+      canFly: false,
+      color: Color.black
+    },
+    {
+      name: 'Robin',
+      canFly: false,
+      color: Color.green
+    },
+    {
+      name: 'Flash',
+      canFly: false,
+      color: Color.red
+    }
+  ];
 
   toggleUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  changeOrder(value: keyof Hero) {
+    this.orderBy = value;
   }
 }
