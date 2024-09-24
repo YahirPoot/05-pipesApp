@@ -51,7 +51,7 @@ export class UncommonPageComponent {
     setTimeout(() => {
       resolve('Tenemos data en la promesa');
       console.log('Tenemos data en la promesa');
-      this.person.name = 'Yahir';
+      this.person.name = 'Yahirx  x ';
     }, 3500);
   })
 
